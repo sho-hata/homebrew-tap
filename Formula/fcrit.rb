@@ -1,7 +1,7 @@
 class Fcrit < Formula
   desc "Fork of crit with Go LSP code intelligence in diffs"
   homepage "https://github.com/sho-hata/crit"
-  version "0.1.3"
+  version "0.1.4"
   license "MIT"
 
   # Installs the same `crit` binary as homebrew-core's upstream formula.
@@ -9,23 +9,23 @@ class Fcrit < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/sho-hata/crit/releases/download/v0.1.3/crit-darwin-arm64"
-      sha256 "94222db92b925ddca4cb8d1a19b327dac81622c71879e667513df93925812908"
+      url "https://github.com/sho-hata/crit/releases/download/v0.1.4/crit-darwin-arm64"
+      sha256 "ed8733877246dbc549d53bf48108a7573fc4d43f90761ea96343f69bca9d1787"
     end
     on_intel do
-      url "https://github.com/sho-hata/crit/releases/download/v0.1.3/crit-darwin-amd64"
-      sha256 "f308c4652708bf1c7ded93d4a75fbf3ec92855be215332cb20d20bdac675d285"
+      url "https://github.com/sho-hata/crit/releases/download/v0.1.4/crit-darwin-amd64"
+      sha256 "d5a77cc43406404d9483b17b0abf939fe428bcb004cf96534ad2bc110f275403"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/sho-hata/crit/releases/download/v0.1.3/crit-linux-arm64"
-      sha256 "3a75b25b13400e4b277f47727662e0109aaaf1198fb2c9fcb4a8498419c06bc4"
+      url "https://github.com/sho-hata/crit/releases/download/v0.1.4/crit-linux-arm64"
+      sha256 "83fea0e5b4686fe00d3e1781eeed46723e81d91390e50c39b2ef1296adfe1094"
     end
     on_intel do
-      url "https://github.com/sho-hata/crit/releases/download/v0.1.3/crit-linux-amd64"
-      sha256 "912b6e48fe41705d64813cc620c99e31019af2a0565fa88d089d85cc73aedac2"
+      url "https://github.com/sho-hata/crit/releases/download/v0.1.4/crit-linux-amd64"
+      sha256 "df2722d5429d66dae324963403701375401e5fda349672e72f06fee81c2c864c"
     end
   end
 
@@ -36,7 +36,7 @@ class Fcrit < Formula
 
   test do
     output = shell_output("#{bin}/crit --version").strip
-    assert_match "0.1.3", output
+    assert_match "0.1.4", output
     # Guards against the upstream homebrew-core binary being picked up.
     assert_match "sho-hata/crit", output
   end
